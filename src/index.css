@@ -1,0 +1,74 @@
+* {
+    font-size: 1.25rem;
+    font-family: "Courier New";
+    text-align: center;
+}
+
+body {
+    background-color: darkslategray;
+    color: white;
+}
+
+header {
+    padding: 15px;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: goldenrod;
+}
+
+.main_frame {
+    border: 2px white dashed;
+    display: flex;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-right: 2px white dashed;
+}
+
+.label {
+    text-decoration: underline;
+}
+
+.bases {
+    width: 15%;
+}
+
+.stat {
+    text-align: left;
+}
+
+.adjust {
+    margin: 7px;
+}
+
+.total_frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.total {
+    color: darkgoldenrod;
+}
+
+span {
+    padding: 5px;
+    margin: 5px;
+}
+
+.race {
+    margin: 10px;
+}
+
+.playerChoice {
+    display: none;
+}
+
+.playerChoice2 {
+    display: none;
+}
