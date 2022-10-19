@@ -1,5 +1,4 @@
-
-       let strAdjust = 0,
+ let strAdjust = 0,
             baseStr = 8,
         dexAdjust = 0,
             baseDex = 8,
@@ -15,19 +14,35 @@
 
     let pointValue;
 
+    function resetVals() {
+            strAdjust = 0,
+            baseStr = 8,
+            dexAdjust = 0,
+            baseDex = 8,
+            conAdjust = 0,
+            baseCon = 8,
+            intAdjust = 0,
+            baseInt = 8,
+            wisAdjust = 0,
+            baseWis = 8,
+            chaAdjust = 0,
+            baseCha = 8,
+            pointBuy = 32;
+    }
     function setBases() {
+        document.getElementById('playerChoice').style.display = 'none';
+        document.getElementById('playerChoice2').style.display = 'none';
+
         let race = document.getElementById("race").selectedIndex;
         let raceArr = document.querySelectorAll('.option1');
         let use = raceArr[race].value;
 
-        baseCha = 8;
-        baseWis = 8;
-        baseDex = 8;
-        baseStr = 8;
-        baseCon = 8;
-        baseInt = 8;
+       resetVals();
 
-        if(use === 'Aarakocra') {
+        if(use === 'reset'){
+            resetVals();
+
+        } else if(use === 'Aarakocra') {
             baseDex += 2;
             baseWis += 1;
         } else if(use === 'Fallen Aasimar') {
@@ -97,19 +112,21 @@
    function statDecrease(stat, baseStat) {
        let total = baseStat + stat;
 
+
        if(total >= 19) {
            pointValue = 4;
-       } else if(total <= 18 && total > 15) {
+       } else if(total <= 18 && total > 16) {
            pointValue = 3;
        } else if(total <= 16 && total > 13) {
            pointValue = 2;
-       } else if(total <= 13) {
+       } else if(total <= 14) {
            pointValue = 1;
        }
         console.log(pointBuy);
        if((baseStat + stat) - 1 >= 4) {
            stat = stat -1;
             pointBuyUp(pointValue);
+            updatePoints();
             return stat;
        } else {
            throw 'Cannot drop stat any lower!';
@@ -121,9 +138,9 @@
 
       if(total <= 12) {
           pointValue = 1;
-      } else if(total >= 13 && total < 15) {
+      } else if(total >= 13 && total < 16) {
           pointValue = 2;
-      } else if(total >= 15 && total < 18) {
+      } else if(total >= 16 && total < 18) {
           pointValue = 3;
       } else if(total >= 18) {
           pointValue = 4;
@@ -135,6 +152,7 @@
         if((baseStat + stat) + 1 <= 20) {
             stat = stat + 1;
             pointBuyDown(pointValue);
+            updatePoints();
             return stat;
         }  else {
             throw 'Cannot raise stat any further!';
@@ -190,5 +208,10 @@
             }
 
     }
+
+    function updatePoints() {
+        document.getElementById('pointsRemaining').innerText = `Points remaining: ${pointBuy}`
+    }
+    updatePoints();
     setAdjust();
     setBases();
