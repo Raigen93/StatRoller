@@ -8,13 +8,24 @@
 </head>
 <body>
     <header> Raigen's Point Builder</header>
-
+    <div class="rules">
+        <h2>Rules:</h2>
+        <ul>
+            <li>The builder is currently based off of a 32 point pool.</li>
+            <li>Stats can range from a min of 4 to a max of 20.</li>
+            <li>Bumping a stat from 8-13 decreases the pool buy 1.</li>
+            <li>14-16 costs 2 points each increase.</li>
+            <li>17 & 18 both cost 3 points, 19 & 20 both cost 4.</li>
+            <li>Any decreases will refund the associated points.</li>
+        </ul>
+    </div>
     <section class="race">
         <div>
             <label for="race">Choose A Race:</label>
             <select id="race" name="race_choice" onchange="setBases()
-                                                            setAdjust()">
-                <option class="option1" value=""></option>
+                                                            setAdjust()
+                                                             updatePoints()">
+                <option class="option1" value="reset"></option>
                 <option class="option1" value="Aarakocra">Aarakocra</option>
                 <option class="option1" value="Fallen Aasimar">Aasimar, Fallen</option>
                 <option class="option1" value="Protector Aasimar">Aasimar, Protector</option>
@@ -40,8 +51,39 @@
         </div>
     </section>
 
+    <div>
+        <span id="pointsRemaining"></span>
+    </div>
+
+    <div id="playerChoice" class="playerChoice">
+        <label for="pick1">Choose A Stat:</label>
+        <select id="pick1" name="pick_1" onchange="playerChoice('pick1', '.pick1')
+                                                        setAdjust()">
+            <option class="pick1" value=" "></option>
+            <option class="pick1" value="str">Strength</option>
+            <option class="pick1" value="dex">Dexterity</option>
+            <option class="pick1" value="con">Constitution</option>
+            <option class="pick1" value="int">Intelligence</option>
+            <option class="pick1" value="wis">Wisdom</option>
+            <option class="pick1" value="cha">Charisma</option>
+        </select>
+    </div>
+    <div id="playerChoice2" class="playerChoice2">
+        <label for="pick2">Choose A Different Stat:</label>
+        <select id="pick2" name="pick_2" onchange="playerChoice('pick2', '.pick2')
+                                                        setAdjust()">
+            <option class="pick2" value=" "></option>
+            <option class="pick2" value="str">Strength</option>
+            <option class="pick2" value="dex">Dexterity</option>
+            <option class="pick2" value="con">Constitution</option>
+            <option class="pick2" value="int">Intelligence</option>
+            <option class="pick2" value="wis">Wisdom</option>
+            <option class="pick2" value="cha">Charisma</option>
+        </select>
+    </div>
+
 <section class="main_frame">
-    <div class="frame">
+    <div class="frame mobile1">
         <span class="label"> Stats </span>
 
         <span class="stat">Strength</span>
@@ -56,23 +98,9 @@
 
         <span class="stat">Charisma</span>
     </div>
+
     <div class="frame bases">
-        <span class="label"> Base Values </span>
-
-        <span class="base">8</span>
-
-        <span class="base">8</span>
-
-        <span class="base">8</span>
-
-        <span class="base">8</span>
-
-        <span class="base">8</span>
-
-        <span class="base">8</span>
-    </div>
-    <div class="frame bases">
-        <span class="label">Adjust</span>
+        <span class="label">Point Adjust</span>
         <div class="adjust">
             <button onclick="strAdjust = statDecrease(strAdjust, baseStr)
                                 setAdjust()">-</button>
@@ -134,34 +162,6 @@
     </div>
 </section>
 
-    <div id="playerChoice" class="playerChoice">
-        <label for="pick1">Choose A Stat:</label>
-        <select id="pick1" name="pick_1" onchange="playerChoice('pick1', '.pick1')
-                                                        setAdjust()">
-            <option class="pick1" value=" "></option>
-            <option class="pick1" value="str">Strength</option>
-            <option class="pick1" value="dex">Dexterity</option>
-            <option class="pick1" value="con">Constitution</option>
-            <option class="pick1" value="int">Intelligence</option>
-            <option class="pick1" value="wis">Wisdom</option>
-            <option class="pick1" value="cha">Charisma</option>
-        </select>
-    </div>
-    <div id="playerChoice2" class="playerChoice2">
-        <label for="pick2">Choose A Different Stat:</label>
-        <select id="pick2" name="pick_2" onchange="playerChoice('pick2', '.pick2')
-                                                        setAdjust()">
-            <option class="pick2" value=" "></option>
-            <option class="pick2" value="str">Strength</option>
-            <option class="pick2" value="dex">Dexterity</option>
-            <option class="pick2" value="con">Constitution</option>
-            <option class="pick2" value="int">Intelligence</option>
-            <option class="pick2" value="wis">Wisdom</option>
-            <option class="pick2" value="cha">Charisma</option>
-        </select>
-
-
-    </div>
 
 <script src="logic.js"></script>
 </body>
