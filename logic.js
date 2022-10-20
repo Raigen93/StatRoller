@@ -1,5 +1,4 @@
-
-       let strAdjust = 0,
+ let strAdjust = 0,
             baseStr = 8,
         dexAdjust = 0,
             baseDex = 8,

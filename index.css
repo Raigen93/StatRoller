@@ -90,6 +90,7 @@ span {
         justify-content: space-around;
         border: none;
     }
+
     .frame,
     .total_frame {
         min-width: 250px;
@@ -99,5 +100,4 @@ span {
     .total_frame {
         border: 2px dashed white;
     }
-
 }
