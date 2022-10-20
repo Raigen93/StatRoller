@@ -17,24 +17,32 @@ header {
     color: goldenrod;
 }
 
+.rules {
+    font-size: 0.5rem;
+    list-style-type: none;
+    border: 2px solid darkred;
+}
+
+ul {
+    list-style-type: none;
+}
+
 .main_frame {
-    border: 2px white dashed;
     display: flex;
+    width: 95%;
+    border: 2px white dashed;
+    margin: 2.5%;
 }
 
 .frame {
     display: flex;
     flex-direction: column;
-    width: 25%;
-    border-right: 2px white dashed;
+    min-width: 210px;
+    width: 30%;
 }
 
 .label {
     text-decoration: underline;
-}
-
-.bases {
-    width: 15%;
 }
 
 .stat {
@@ -42,7 +50,7 @@ header {
 }
 
 .adjust {
-    margin: 7px;
+    margin: 6px;
 }
 
 .total_frame {
@@ -65,10 +73,31 @@ span {
     margin: 10px;
 }
 
-.playerChoice {
+.playerChoice,
+.playerChoice2{
     display: none;
+    margin: 5px;
 }
 
-.playerChoice2 {
-    display: none;
+@media only screen and (max-width: 720px) {
+    html {
+        min-width: 650px;
+    }
+
+    .main_frame {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border: none;
+    }
+    .frame,
+    .total_frame {
+        min-width: 250px;
+        margin: 10px;
+    }
+
+    .total_frame {
+        border: 2px dashed white;
+    }
+
 }
