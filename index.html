@@ -10,14 +10,14 @@
     <header> Raigen's Point Builder</header>
     <div class="rules">
         <h2>Rules:</h2>
-        <ul>
-            <li>The builder is currently based off of a 32 point pool.</li>
-            <li>Stats can range from a min of 4 to a max of 20.</li>
-            <li>Bumping a stat from 8-13 decreases the pool buy 1.</li>
-            <li>14-16 costs 2 points each increase.</li>
-            <li>17 & 18 both cost 3 points, 19 & 20 both cost 4.</li>
-            <li>Any decreases will refund the associated points.</li>
-        </ul>
+        <p>
+            The builder is currently based off of a 32 point pool.<br/>
+            Stats can range from a min of 4 to a max of 20.<br/>
+            Bumping a stat from 8-13 decreases the pool by 1.<br/>
+            14-16 costs 2 points each increase.<br/>
+            17 & 18 both cost 3 points, 19 & 20 both cost 4.<br/>
+            Any decreases will refund the associated points.<br/>
+        </p>
     </div>
     <section class="race">
         <div>
@@ -102,50 +102,50 @@
     <div class="frame bases">
         <span class="label">Point Adjust</span>
         <div class="adjust">
-            <button onclick="strAdjust = statDecrease(strAdjust, baseStr)
+            <button class="decrease" onclick="strAdjust = statDecrease(strAdjust, baseStr)
                                 setAdjust()">-</button>
             <span id="strAdjust"></span>
-            <button onclick="strAdjust = statIncrease(strAdjust, baseStr)
+            <button class="increase" onclick="strAdjust = statIncrease(strAdjust, baseStr)
                                 setAdjust()">+</button>
         </div>
 
         <div class="adjust">
-            <button onclick="dexAdjust = statDecrease(dexAdjust, baseDex)
+            <button class="decrease" onclick="dexAdjust = statDecrease(dexAdjust, baseDex)
                                         setAdjust()">-</button>
             <span id="dexAdjust" ></span>
-            <button onclick="dexAdjust = statIncrease(dexAdjust, baseDex)
+            <button class="increase" onclick="dexAdjust = statIncrease(dexAdjust, baseDex)
                                         setAdjust()">+</button>
         </div>
 
         <div class="adjust">
-            <button onclick="conAdjust = statDecrease(conAdjust, baseCon)
+            <button class="decrease" onclick="conAdjust = statDecrease(conAdjust, baseCon)
                                         setAdjust()">-</button>
             <span id="conAdjust"></span>
-            <button onclick="conAdjust = statIncrease(conAdjust, baseCon)
+            <button class="increase" onclick="conAdjust = statIncrease(conAdjust, baseCon)
                                         setAdjust()">+</button>
         </div>
 
         <div class="adjust">
-            <button onclick="intAdjust = statDecrease(intAdjust, baseInt)
+            <button class="decrease" onclick="intAdjust = statDecrease(intAdjust, baseInt)
                                         setAdjust()">-</button>
             <span id="intAdjust"></span>
-            <button onclick="intAdjust = statIncrease(intAdjust, baseInt)
+            <button class="increase" onclick="intAdjust = statIncrease(intAdjust, baseInt)
                                         setAdjust()">+</button>
         </div>
 
         <div class="adjust">
-            <button onclick="wisAdjust = statDecrease(wisAdjust, baseWis)
+            <button class="decrease" onclick="wisAdjust = statDecrease(wisAdjust, baseWis)
                                         setAdjust()">-</button>
             <span id="wisAdjust"></span>
-            <button onclick="wisAdjust = statIncrease(wisAdjust, baseWis)
+            <button class="increase" onclick="wisAdjust = statIncrease(wisAdjust, baseWis)
                                         setAdjust()">+</button>
         </div>
 
         <div class="adjust">
-            <button onclick="chaAdjust = statDecrease(chaAdjust, baseCha)
+            <button class="decrease" onclick="chaAdjust = statDecrease(chaAdjust, baseCha)
                                         setAdjust()">-</button>
             <span id="chaAdjust"></span>
-            <button onclick="chaAdjust = statIncrease(chaAdjust, baseCha)
+            <button class="increase" onclick="chaAdjust = statIncrease(chaAdjust, baseCha)
                                         setAdjust()">+</button>
         </div>
 

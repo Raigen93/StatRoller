@@ -1,5 +1,5 @@
 * {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-family: "Courier New";
     text-align: center;
 }
@@ -12,19 +12,13 @@ body {
 header {
     padding: 15px;
     text-decoration: underline;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: goldenrod;
 }
 
 .rules {
-    font-size: 0.5rem;
-    list-style-type: none;
     border: 2px solid darkred;
-}
-
-ul {
-    list-style-type: none;
 }
 
 .main_frame {
@@ -61,7 +55,7 @@ ul {
 }
 
 .total {
-    color: darkgoldenrod;
+    color: ghostwhite;
 }
 
 span {
@@ -79,7 +73,15 @@ span {
     margin: 5px;
 }
 
-@media only screen and (max-width: 720px) {
+.decrease {
+    background: darkred;
+}
+
+.increase {
+    background: darkgreen;
+}
+
+@media only screen and (max-width: 900px) {
     html {
         min-width: 650px;
     }
@@ -100,4 +102,5 @@ span {
     .total_frame {
         border: 2px dashed white;
     }
+
 }
