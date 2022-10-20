@@ -82,6 +82,18 @@
         </select>
     </div>
 
+    <div class="total_frame_mobile">
+        <span>Totals:</span>
+        <div class="m_totals">
+        <span class="total" id="strTotal_m"></span>
+        <span class="total" id="dexTotal_m"></span>
+        <span class="total" id="conTotal_m"></span>
+        <span class="total" id="intTotal_m"></span>
+        <span class="total" id="wisTotal_m"></span>
+        <span class="total" id="chaTotal_m"></span>
+        </div>
+    </div>
+
 <section class="main_frame">
     <div class="frame mobile1">
         <span class="label"> Stats </span>
@@ -100,7 +112,7 @@
     </div>
 
     <div class="frame bases">
-        <span class="label">Point Adjust</span>
+        <span class="label">Point Buy</span>
         <div class="adjust">
             <button class="decrease" onclick="strAdjust = statDecrease(strAdjust, baseStr)
                                 setAdjust()">-</button>
@@ -151,7 +163,7 @@
 
     </div>
 
-    <div class="total_frame">
+    <div class="total_frame_desktop">
         <span>Totals:</span>
         <span class="total" id="strTotal"></span>
         <span class="total" id="dexTotal"></span>

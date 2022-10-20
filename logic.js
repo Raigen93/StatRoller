@@ -174,6 +174,13 @@
         document.getElementById('intTotal').innerHTML = 'Intelligence: ' + (intAdjust + baseInt).toString();
         document.getElementById('wisTotal').innerHTML = 'Wisdom: ' + (wisAdjust + baseWis).toString();
         document.getElementById('chaTotal').innerHTML = 'Charisma: ' + (chaAdjust + baseCha).toString();
+
+       document.getElementById('strTotal_m').innerHTML = 'Strength: ' + (strAdjust + baseStr).toString();
+       document.getElementById('dexTotal_m').innerHTML = 'Dexterity: ' + (dexAdjust + baseDex).toString();
+       document.getElementById('conTotal_m').innerHTML = 'Constitution: ' + (conAdjust + baseCon).toString();
+       document.getElementById('intTotal_m').innerHTML = 'Intelligence: ' + (intAdjust + baseInt).toString();
+       document.getElementById('wisTotal_m').innerHTML = 'Wisdom: ' + (wisAdjust + baseWis).toString();
+       document.getElementById('chaTotal_m').innerHTML = 'Charisma: ' + (chaAdjust + baseCha).toString();
     }
 
     function pointBuyUp(pointValue) {

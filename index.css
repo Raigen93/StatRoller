@@ -7,6 +7,8 @@
 body {
     background-color: darkslategray;
     color: white;
+    width: 80%;
+    margin: 15px 10%;
 }
 
 header {
@@ -47,11 +49,29 @@ header {
     margin: 6px;
 }
 
-.total_frame {
+.total_frame_desktop {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 40%;
+    text-decoration: 2px goldenrod underline;
+}
+
+.total_frame_mobile {
+    width: 80%;
+    margin: 10px 10%;
+    text-decoration: 2px goldenrod underline;
+    display: none;
+}
+
+.m_totals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#pointsRemaining {
+    text-align: center;
 }
 
 .total {
@@ -99,8 +119,11 @@ span {
         margin: 10px;
     }
 
-    .total_frame {
-        border: 2px dashed white;
+    .total_frame_desktop {
+        display: none;
     }
 
+    .total_frame_mobile {
+        display: block;
+    }
 }
