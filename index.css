@@ -64,6 +64,7 @@ header {
     margin: 10px 10%;
     text-decoration: 2px goldenrod underline;
     display: none;
+    text-align: center;
 }
 
 .m_totals {
