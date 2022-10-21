@@ -60,7 +60,7 @@ header {
 }
 
 .total_frame_mobile {
-    width: 65%;
+    width: 80%;
     margin: 10px 10%;
     text-decoration: 2px goldenrod underline;
     display: none;
