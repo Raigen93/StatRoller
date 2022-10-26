@@ -27,7 +27,7 @@ header {
 
 .main_frame {
     display: flex;
-    width: 95%;
+    width: 96%;
     border: 2px white dashed;
     margin: 2.5%;
 }
@@ -55,7 +55,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
+    width: 350px;
     text-decoration: 2px goldenrod underline;
 }
 
@@ -126,6 +126,7 @@ span {
     }
 
     .total_frame_mobile {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 }
