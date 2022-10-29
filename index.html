@@ -7,7 +7,13 @@
     <link href="index.css" rel="stylesheet">
 </head>
 <body>
-    <header> Raigen's Point Builder</header>
+
+<header> Raigen's Stat Builder</header>
+
+<button id="toggle" onclick="toggle()">Point Buy</button>
+
+<section id="pointBuy">
+
     <div class="rules">
         <h2>Rules:</h2>
         <p>
@@ -18,64 +24,6 @@
             17 & 18 both cost 3 points, 19 & 20 both cost 4.<br/>
             Any decreases will refund the associated points.<br/>
         </p>
-    </div>
-    <section class="race">
-        <div>
-            <label for="race">Choose A Race:</label>
-            <select id="race" name="race_choice" onchange="setBases()
-                                                            setAdjust()
-                                                             updatePoints()">
-                <option class="option1" value="reset"></option>
-                <option class="option1" value="Aarakocra">Aarakocra</option>
-                <option class="option1" value="Fallen Aasimar">Aasimar, Fallen</option>
-                <option class="option1" value="Protector Aasimar">Aasimar, Protector</option>
-                <option class="option1" value="Scourge Aasimar">Aasimar, Scourge</option>
-                <option class="option1" value="Variant Aasimar">Aasimar, Variant</option>
-                <option class="option1" value="Bugbear">Bugbear</option>
-                <option class="option1" value="Centaur">Centaur</option>
-                <option class="option1" value="Dragonborn">Dragonborn</option>
-                <option class="option1" value="Hill Dwarf">Dwarf, Hill</option>
-                <option class="option1" value="Mountain Dwarf">Dwarf, Mountain</option>
-                <option class="option1" value="High Elf">Elf, High</option>
-                <option class="option1" value="Wood Elf">Elf, Wood</option>
-                <option class="option1" value="Half-Elf">Half-Elf</option>
-                <option class="option1" value="Half-Orc">Half-Orc</option>
-                <option class="option1" value="LightFoot Halfling">Halfling, LightFoot</option>
-                <option class="option1" value="Stout Halfling">Halfling, Stout</option>
-                <option class="option1" value="Human">Human</option>
-                <option class="option1" value="Human Variant">Human, Variant</option>
-                <option class="option1" value="Rock Gnome">Gnome, Rock</option>
-                <option class="option1" value="Tielfing">Tielfing</option>
-
-            </select>
-        </div>
-    </section>
-
-    <div id="playerChoice" class="playerChoice">
-        <label for="pick1">Choose A Stat:</label>
-        <select id="pick1" name="pick_1" onchange="playerChoice('pick1', '.pick1')
-                                                        setAdjust()">
-            <option class="pick1" value=" "></option>
-            <option class="pick1" value="str">Strength</option>
-            <option class="pick1" value="dex">Dexterity</option>
-            <option class="pick1" value="con">Constitution</option>
-            <option class="pick1" value="int">Intelligence</option>
-            <option class="pick1" value="wis">Wisdom</option>
-            <option class="pick1" value="cha">Charisma</option>
-        </select>
-    </div>
-    <div id="playerChoice2" class="playerChoice2">
-        <label for="pick2">Choose A Different Stat:</label>
-        <select id="pick2" name="pick_2" onchange="playerChoice('pick2', '.pick2')
-                                                        setAdjust()">
-            <option class="pick2" value=" "></option>
-            <option class="pick2" value="str">Strength</option>
-            <option class="pick2" value="dex">Dexterity</option>
-            <option class="pick2" value="con">Constitution</option>
-            <option class="pick2" value="int">Intelligence</option>
-            <option class="pick2" value="wis">Wisdom</option>
-            <option class="pick2" value="cha">Charisma</option>
-        </select>
     </div>
 
     <div class="total_frame_mobile">
@@ -173,7 +121,101 @@
         <span class="total" id="chaTotal"></span>
     </div>
 </section>
+</section>
 
+<section id="rollScores">
+
+    <div>
+        <p>A simple stat roller. The program rolls 4d6 die for each stat, dropping the lowest number.
+            It then adds the three remaining numbers together</p>
+    </div>
+        <button onclick="rollStat()
+         setRolls()"><em>Roll'em!</em></button>
+    <section id="pointRoll">
+
+        <div class="rollStat">
+            <span id="rollStr"></span>
+        </div>
+        <div class="rollStat">
+            <span id="rollDex"></span>
+        </div>
+        <div class="rollStat">
+            <span id="rollCon"></span>
+        </div>
+        <div class="rollStat">
+            <span id="rollInt"></span>
+        </div>
+        <div class="rollStat">
+            <span id="rollWis"></span>
+        </div>
+        <div class="rollStat">
+            <span id="rollCha"></span>
+        </div>
+
+    </section>
+
+    <div id="raceBuff"></div>
+
+</section>
+
+<section class="race">
+    <div>
+        <label for="race">Choose A Race:</label>
+        <select id="race" name="race_choice" onchange="setBases()
+                                                            setAdjust()
+                                                             updatePoints()">
+            <option class="option1" value="reset"></option>
+            <option class="option1" value="Aarakocra">Aarakocra</option>
+            <option class="option1" value="Fallen Aasimar">Aasimar, Fallen</option>
+            <option class="option1" value="Protector Aasimar">Aasimar, Protector</option>
+            <option class="option1" value="Scourge Aasimar">Aasimar, Scourge</option>
+            <option class="option1" value="Variant Aasimar">Aasimar, Variant</option>
+            <option class="option1" value="Bugbear">Bugbear</option>
+            <option class="option1" value="Centaur">Centaur</option>
+            <option class="option1" value="Dragonborn">Dragonborn</option>
+            <option class="option1" value="Hill Dwarf">Dwarf, Hill</option>
+            <option class="option1" value="Mountain Dwarf">Dwarf, Mountain</option>
+            <option class="option1" value="High Elf">Elf, High</option>
+            <option class="option1" value="Wood Elf">Elf, Wood</option>
+            <option class="option1" value="Half-Elf">Half-Elf</option>
+            <option class="option1" value="Half-Orc">Half-Orc</option>
+            <option class="option1" value="LightFoot Halfling">Halfling, LightFoot</option>
+            <option class="option1" value="Stout Halfling">Halfling, Stout</option>
+            <option class="option1" value="Human">Human</option>
+            <option class="option1" value="Human Variant">Human, Variant</option>
+            <option class="option1" value="Rock Gnome">Gnome, Rock</option>
+            <option class="option1" value="Tielfing">Tielfing</option>
+
+        </select>
+    </div>
+</section>
+
+<div id="playerChoice" class="playerChoice">
+    <label for="pick1">Choose A Stat:</label>
+    <select id="pick1" name="pick_1" onchange="playerChoice('pick1', '.pick1')
+                                                        setAdjust()">
+        <option class="pick1" value=" "></option>
+        <option class="pick1" value="str">Strength</option>
+        <option class="pick1" value="dex">Dexterity</option>
+        <option class="pick1" value="con">Constitution</option>
+        <option class="pick1" value="int">Intelligence</option>
+        <option class="pick1" value="wis">Wisdom</option>
+        <option class="pick1" value="cha">Charisma</option>
+    </select>
+</div>
+<div id="playerChoice2" class="playerChoice2">
+    <label for="pick2">Choose A Different Stat:</label>
+    <select id="pick2" name="pick_2" onchange="playerChoice('pick2', '.pick2')
+                                                        setAdjust()">
+        <option class="pick2" value=" "></option>
+        <option class="pick2" value="str">Strength</option>
+        <option class="pick2" value="dex">Dexterity</option>
+        <option class="pick2" value="con">Constitution</option>
+        <option class="pick2" value="int">Intelligence</option>
+        <option class="pick2" value="wis">Wisdom</option>
+        <option class="pick2" value="cha">Charisma</option>
+    </select>
+</div>
 
 <script src="logic.js"></script>
 </body>

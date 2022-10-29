@@ -10,6 +10,12 @@
             baseWis = 8,
         chaAdjust = 0,
             baseCha = 8,
+        rollStr,
+        rollDex,
+        rollCon,
+        rollInt,
+        rollWis,
+        rollCha,
            pointBuy = 32;
 
     let pointValue;
@@ -36,6 +42,7 @@
         let race = document.getElementById("race").selectedIndex;
         let raceArr = document.querySelectorAll('.option1');
         let use = raceArr[race].value;
+        let raceBuff = document.getElementById('raceBuff');
 
        resetVals();
 
@@ -45,6 +52,7 @@
         } else if(use === 'Aarakocra') {
             baseDex += 2;
             baseWis += 1;
+            raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Wisdom';
         } else if(use === 'Fallen Aasimar') {
             baseCha += 2;
             baseStr += 1;
@@ -222,3 +230,58 @@
     updatePoints();
     setAdjust();
     setBases();
+
+    //logic for pointRoller
+
+ function roller() {
+   return  Math.floor(Math.random() * 6) +1;
+ }
+
+ function rollStat() {
+     let rollArr = [];
+
+     let d1 = roller();
+     let d2 = roller();
+     let d3 = roller();
+     let d4 = roller();
+
+     rollArr.push(d1,d2, d3, d4);
+     rollArr.sort();
+     rollArr.shift();
+
+     let total = rollArr.reduce((previousValue, currentValue) => previousValue + currentValue);
+     return total;
+ }
+
+ function setRolls() {
+      rollStr = rollStat();
+      rollDex = rollStat();
+      rollCon = rollStat();
+      rollInt = rollStat();
+      rollWis = rollStat();
+      rollCha = rollStat();
+
+     document.getElementById('rollStr').innerText = rollStr;
+     document.getElementById('rollDex').innerText = rollDex;
+     document.getElementById('rollCon').innerText = rollCon;
+     document.getElementById('rollInt').innerText = rollInt;
+     document.getElementById('rollWis').innerText = rollWis;
+     document.getElementById('rollCha').innerText = rollCha;
+ }
+
+ function toggle() {
+     let pointBuy = document.getElementById('pointBuy');
+     let diceRoll = document.getElementById('rollScores');
+     let toggle = document.getElementById('toggle');
+     let raceSelect = document.getElementById('race');
+
+    if(pointBuy.style.display !== 'none') {
+         pointBuy.style.display = 'none';
+         diceRoll.style.display = 'block';
+         toggle.innerText = 'Dice Roller';
+     } else if(pointBuy.style.display === 'none') {
+         diceRoll.style.display = 'none';
+         pointBuy.style.display = 'block';
+         toggle.innerText = 'Point Buy';
+     }
+ }
