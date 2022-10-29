@@ -3,11 +3,11 @@
     font-weight: bold;
     font-family: "Courier New";
     text-align: center;
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
 }
 
 html {
-    background: url("/images/tileBackground.jpg") no-repeat center center fixed;
+    background: url("images/tileBackground.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -16,6 +16,7 @@ body {
     color: white;
     width: 70%;
     margin: 15px 15%;
+    padding: 10px;
 }
 
 header {

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="909f73d7-db6d-4043-a501-213d749a0e6d" name="Changes" comment="images added">
+    <list default="true" id="909f73d7-db6d-4043-a501-213d749a0e6d" name="Changes" comment="fadeIn effect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
     </list>
@@ -95,6 +95,8 @@
       <workItem from="1666742024713" duration="1915000" />
       <workItem from="1666910787189" duration="3867000" />
       <workItem from="1666990179448" duration="6061000" />
+      <workItem from="1667068416150" duration="55000" />
+      <workItem from="1667068540210" duration="267000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666144395717</created>
@@ -145,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667049191196</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fadeIn effect">
+      <created>1667068451074</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667068451074</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +177,7 @@
     <MESSAGE value="Added styling" />
     <MESSAGE value="Adjust layout, change background image" />
     <MESSAGE value="images added" />
-    <option name="LAST_COMMIT_MESSAGE" value="images added" />
+    <MESSAGE value="fadeIn effect" />
+    <option name="LAST_COMMIT_MESSAGE" value="fadeIn effect" />
   </component>
 </project>
