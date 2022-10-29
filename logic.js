@@ -35,6 +35,7 @@
             baseCha = 8,
             pointBuy = 32;
     }
+
     function setBases() {
         document.getElementById('playerChoice').style.display = 'none';
         document.getElementById('playerChoice2').style.display = 'none';
@@ -56,48 +57,63 @@
         } else if(use === 'Fallen Aasimar') {
             baseCha += 2;
             baseStr += 1;
+            raceBuff.innerText = 'You receive +2 to Charisma and +1 to Strength';
         } else if(use === 'Protector Aasimar') {
             baseCha += 2;
             baseWis += 1;
+            raceBuff.innerText = 'You receive +2 to Charisma and +1 to Wisdom';
         } else if(use === 'Scourge Aasimar') {
             baseCha += 2;
             baseCon += 2;
+            raceBuff.innerText = 'You receive +2 to Charisma and +2 to Constitution';
         } else if(use === 'Variant Aasimar') {
             baseCha += 2;
             baseWis += 1;
+            raceBuff.innerText = 'You receive +2 to Charisma and +1 to Wisdom';
         } else if(use === 'Bugbear') {
             baseStr += 2;
             baseDex += 1;
+            raceBuff.innerText = 'You receive +2 to Strength and +1 to Dexterity';
         } else if(use === 'Centaur') {
             baseStr += 2;
             baseWis += 1;
+            raceBuff.innerText = 'You receive +2 to Strength and +1 to Wisdom';
         } else if(use === 'Dragonborn') {
             baseStr += 2;
             baseCha += 1;
+            raceBuff.innerText = 'You receive +2 to Strength and +1 to Charisma';
         } else if(use === 'Hill Dwarf') {
             baseCon += 2;
             baseWis += 1;
+            raceBuff.innerText = 'You receive +2 to Constitution and +1 to Wisdom';
         } else if(use === 'Mountain Dwarf') {
             baseCon += 2;
             baseStr += 2;
+            raceBuff.innerText = 'You receive +2 to Constitution and +2 to Strength';
         } else if(use === 'High Elf') {
             baseDex += 2;
             baseInt += 1;
+            raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Intelligence';
         } else if(use === 'Wood Elf') {
             baseDex += 2;
             baseWis += 1;
+            raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Wisdom';
         } else if(use === 'Half-Elf') {
             baseCha += 2;
             document.getElementById('playerChoice').style.display = 'inline-block';
+            raceBuff.innerText = 'You receive +2 to Charisma and +1 to a stat of your choosing';
         } else if(use === 'Half-Orc') {
             baseStr += 2;
             baseCon += 1;
+            raceBuff.innerText = 'You receive +2 to Strength and +1 to Constitution';
         } else if(use === 'LightFoot Halfling') {
             baseDex += 2;
             baseCha += 1;
+            raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Charisma';
         } else if(use === 'Stout Halfling') {
             baseDex += 2;
             baseCon += 1;
+            raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Constitution';
         } else if(use === 'Human') {
             baseCha += 1;
             baseWis += 1;
@@ -105,15 +121,19 @@
             baseStr += 1;
             baseCon += 1;
             baseInt += 1;
+            raceBuff.innerText = 'You receive +1 to all stats';
         } else if(use === 'Human Variant') {
             document.getElementById('playerChoice').style.display = 'inline-block';
             document.getElementById('playerChoice2').style.display = 'inline-block';
+            raceBuff.innerText = 'You can choose two different stats to increase by +1';
         } else if(use === 'Rock Gnome') {
             baseInt += 2;
             baseCon += 1;
+            raceBuff.innerText = 'You receive +2 to Intelligence and +1 to Constitution';
         } else if(use === 'Tiefling') {
             baseInt += 1;
             baseCha += 2;
+            raceBuff.innerText = 'You receive +2 to Charisma and +1 to Intelligence';
         }
     }
 

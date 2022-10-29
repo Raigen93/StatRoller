@@ -15,7 +15,7 @@ body {
     background-color: rgba(0,0,0, 0.8);
     color: white;
     width: 70%;
-    margin: 15px 15%;
+    margin: 3% 15%;
     padding: 10px;
 }
 
@@ -126,8 +126,14 @@ span {
     display: none;
 }
 
+.rollStat {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 button {
     cursor: pointer;
+    margin: 5px;
 }
 
 
