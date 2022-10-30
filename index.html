@@ -10,7 +10,9 @@
 
 <header> Raigen's Stat Builder</header>
 
-<button id="toggle" onclick="toggle()">Point Buy</button>
+<button id="toggle" onclick="toggle()
+                             setBases();
+">Switch to Dice Roller</button>
 
 <section id="pointBuy">
 
@@ -127,33 +129,44 @@
 
     <div>
         <p>A simple stat roller. The program rolls 4d6 die for each stat, dropping the lowest number.
-            It then adds the three remaining numbers together. Assign the values to whichever stat you wish,
-        but remember to then add the Racial Modifiers.</p>
+            It then adds the three remaining numbers together. </p>
     </div>
         <button onclick="rollStat()
          setRolls()"><em>Roll'em!</em></button>
     <section id="pointRoll">
 
         <div class="rollStat">
+            <span>Str</span>
             <span id="rollStr"></span>
+            <span id="strBuff"></span>
         </div>
         <div class="rollStat">
+            <span>Dex</span>
             <span id="rollDex"></span>
+            <span id="dexBuff"></span>
         </div>
         <div class="rollStat">
+            <span>Con</span>
             <span id="rollCon"></span>
+            <span id="conBuff"></span>
         </div>
         <div class="rollStat">
+            <span>Int</span>
             <span id="rollInt"></span>
+            <span id="intBuff"></span>
         </div>
         <div class="rollStat">
+            <span>Wis</span>
             <span id="rollWis"></span>
+            <span id="wisBuff"></span>
         </div>
         <div class="rollStat">
+            <span>Cha</span>
             <span id="rollCha"></span>
+            <span id="chaBuff"></span>
         </div>
 
-    </section>
+</section>
 
     <div id="raceBuff"></div>
 
@@ -163,8 +176,9 @@
     <div>
         <label for="race">Choose A Race:</label>
         <select id="race" name="race_choice" onchange="setBases()
-                                                            setAdjust()
-                                                             updatePoints()">
+                                                        setAdjust()
+                                                        updatePoints()
+                                                        updateChoice()">
             <option class="option1" value="reset"></option>
             <option class="option1" value="Aarakocra">Aarakocra</option>
             <option class="option1" value="Fallen Aasimar">Aasimar, Fallen</option>
@@ -193,8 +207,7 @@
 
 <div id="playerChoice" class="playerChoice">
     <label for="pick1">Choose A Stat:</label>
-    <select id="pick1" name="pick_1" onchange="playerChoice('pick1', '.pick1')
-                                                        setAdjust()">
+    <select id="pick1" name="pick_1" onchange="playerChoice('pick1', '.pick1'), setAdjust()">
         <option class="pick1" value=" "></option>
         <option class="pick1" value="str">Strength</option>
         <option class="pick1" value="dex">Dexterity</option>
@@ -206,8 +219,7 @@
 </div>
 <div id="playerChoice2" class="playerChoice2">
     <label for="pick2">Choose A Different Stat:</label>
-    <select id="pick2" name="pick_2" onchange="playerChoice('pick2', '.pick2')
-                                                        setAdjust()">
+    <select id="pick2" name="pick_2" onchange="playerChoice('pick2', '.pick2'), setAdjust()">
         <option class="pick2" value=" "></option>
         <option class="pick2" value="str">Strength</option>
         <option class="pick2" value="dex">Dexterity</option>
