@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="909f73d7-db6d-4043-a501-213d749a0e6d" name="Changes" comment="update styling/ work on die roll method">
+    <list default="true" id="909f73d7-db6d-4043-a501-213d749a0e6d" name="Changes" comment="update logic/ work on die roll method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dice roll.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/diceCloseUp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/diceCloseUp2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dragonVfig.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/tileBackground.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/logic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +101,9 @@
       <workItem from="1666910787189" duration="3867000" />
       <workItem from="1666990179448" duration="6061000" />
       <workItem from="1667068416150" duration="55000" />
-      <workItem from="1667068540210" duration="9060000" />
+      <workItem from="1667068540210" duration="9539000" />
+      <workItem from="1667092632341" duration="408000" />
+      <workItem from="1667335985010" duration="930000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666144395717</created>
@@ -170,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667073245154</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update logic/ work on die roll method">
+      <created>1667092545892</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667092545892</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +207,7 @@
     <MESSAGE value="images added" />
     <MESSAGE value="fadeIn effect" />
     <MESSAGE value="update styling/ work on die roll method" />
-    <option name="LAST_COMMIT_MESSAGE" value="update styling/ work on die roll method" />
+    <MESSAGE value="update logic/ work on die roll method" />
+    <option name="LAST_COMMIT_MESSAGE" value="update logic/ work on die roll method" />
   </component>
 </project>

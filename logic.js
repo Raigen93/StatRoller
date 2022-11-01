@@ -445,12 +445,17 @@
       rollWis = rollStat();
       rollCha = rollStat();
 
-     document.getElementById('rollStr').innerText = rollStr;
-     document.getElementById('rollDex').innerText = rollDex;
-     document.getElementById('rollCon').innerText = rollCon;
-     document.getElementById('rollInt').innerText = rollInt;
-     document.getElementById('rollWis').innerText = rollWis;
-     document.getElementById('rollCha').innerText = rollCha;
+      playDiceRoll();
+
+      setTimeout(function() {
+          document.getElementById('rollStr').innerText = rollStr;
+          document.getElementById('rollDex').innerText = rollDex;
+          document.getElementById('rollCon').innerText = rollCon;
+          document.getElementById('rollInt').innerText = rollInt;
+          document.getElementById('rollWis').innerText = rollWis;
+          document.getElementById('rollCha').innerText = rollCha;
+      }, 500);
+
  }
 
  function toggle() {
@@ -467,5 +472,18 @@
          diceRoll.style.display = 'none';
          pointBuy.style.display = 'block';
          toggle.innerText = 'Switch to Dice Roller';
+     }
+ }
+
+ function playDiceRoll() {
+     let roll = roller();
+
+     const roll1 = new Audio('media/dice_throw1.wav');
+     const roll2 = new Audio('media/dice_throw2.wav');
+
+     if(roll % 2 === 0) {
+        roll1.play();
+     } else {
+         roll2.play();
      }
  }

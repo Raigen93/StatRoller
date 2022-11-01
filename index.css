@@ -7,7 +7,7 @@
 }
 
 html {
-    background: url("images/tileBackground.jpg") no-repeat center center fixed;
+    background: url("media/tileBackground.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -135,6 +135,8 @@ span {
 
 button {
     cursor: pointer;
+    background: slategrey;
+    border-radius: 4px;
 }
 
 
