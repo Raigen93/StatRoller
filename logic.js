@@ -406,6 +406,13 @@
 
       playDiceRoll();
 
+          document.getElementById('rollStr').innerText = '';
+          document.getElementById('rollDex').innerText = '';
+          document.getElementById('rollCon').innerText = '';
+          document.getElementById('rollInt').innerText = '';
+          document.getElementById('rollWis').innerText = '';
+          document.getElementById('rollCha').innerText = '';
+
       setTimeout(function() {
           document.getElementById('rollStr').innerText = rollStr;
           document.getElementById('rollDex').innerText = rollDex;
@@ -413,7 +420,7 @@
           document.getElementById('rollInt').innerText = rollInt;
           document.getElementById('rollWis').innerText = rollWis;
           document.getElementById('rollCha').innerText = rollCha;
-      }, 500);
+      }, 1000);
 
  }
 
