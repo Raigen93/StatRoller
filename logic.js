@@ -447,6 +447,13 @@
 
       playDiceRoll();
 
+          document.getElementById('rollStr').innerText = '';
+          document.getElementById('rollDex').innerText = '';
+          document.getElementById('rollCon').innerText = '';
+          document.getElementById('rollInt').innerText = '';
+          document.getElementById('rollWis').innerText = '';
+          document.getElementById('rollCha').innerText = '';
+
       setTimeout(function() {
           document.getElementById('rollStr').innerText = rollStr;
           document.getElementById('rollDex').innerText = rollDex;
