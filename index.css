@@ -133,6 +133,10 @@ span {
     flex-direction: column;
 }
 
+.buff {
+    display: block;
+}
+
 button {
     cursor: pointer;
     background: slategrey;

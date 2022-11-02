@@ -115,12 +115,19 @@
 
     <div class="total_frame_desktop">
         <span>Totals:</span>
-        <span class="total" id="strTotal"></span>
-        <span class="total" id="dexTotal"></span>
-        <span class="total" id="conTotal"></span>
-        <span class="total" id="intTotal"></span>
-        <span class="total" id="wisTotal"></span>
-        <span class="total" id="chaTotal"></span>
+
+            <span class="total" id="strTotal"></span>
+
+            <span class="total" id="dexTotal"></span>
+
+            <span class="total" id="conTotal"></span>
+
+            <span class="total" id="intTotal"></span>
+
+            <span class="total" id="wisTotal"></span>
+
+            <span class="total" id="chaTotal"></span>
+
     </div>
 </section>
 </section>
@@ -208,7 +215,7 @@
 <div id="playerChoice" class="playerChoice">
     <label for="pick1">Choose A Stat:</label>
     <select id="pick1" name="pick_1" onchange="playerChoice('pick1', '.pick1'), setAdjust()">
-        <option class="pick1" value=" "></option>
+        <option class="pick1" value="none"></option>
         <option class="pick1" value="str">Strength</option>
         <option class="pick1" value="dex">Dexterity</option>
         <option class="pick1" value="con">Constitution</option>
@@ -220,7 +227,7 @@
 <div id="playerChoice2" class="playerChoice2">
     <label for="pick2">Choose A Different Stat:</label>
     <select id="pick2" name="pick_2" onchange="playerChoice('pick2', '.pick2'), setAdjust()">
-        <option class="pick2" value=" "></option>
+        <option class="pick2" value="none"></option>
         <option class="pick2" value="str">Strength</option>
         <option class="pick2" value="dex">Dexterity</option>
         <option class="pick2" value="con">Constitution</option>

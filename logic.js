@@ -11,29 +11,29 @@
         chaAdjust = 0,
             baseCha = 8,
         rollStr,
-            strBuff,
+            strBuff = 0,
         rollDex,
-            dexBuff,
+            dexBuff = 0,
         rollCon,
-            conBuff,
+            conBuff = 0,
         rollInt,
-            intBuff,
+            intBuff = 0,
         rollWis,
-            wisBuff,
+            wisBuff = 0,
         rollCha,
-            chaBuff,
+            chaBuff = 0,
            pointBuy = 32;
 
     let pointValue;
     let raceBuff = document.getElementById('raceBuff');
 
     function resetBuffs() {
-        strBuff = '';
-        dexBuff = '';
-        conBuff = '';
-        intBuff = '';
-        wisBuff = '';
-        chaBuff = '';
+        strBuff = 0;
+        dexBuff = 0;
+        conBuff = 0;
+        intBuff = 0;
+        wisBuff = 0;
+        chaBuff = 0;
         raceBuff.innerText = '';
     }
 
@@ -72,140 +72,87 @@
             raceBuff.innerText = '';
 
         } else if (use === 'Aarakocra') {
-            baseDex += 2;
-            baseWis += 1;
-
             dexBuff = 2;
             wisBuff = 1;
             raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Wisdom';
 
         } else if (use === 'Fallen Aasimar') {
-            baseCha += 2;
-            baseStr += 1;
-
             chaBuff = 2;
             strBuff = 1;
             raceBuff.innerText = 'You receive +2 to Charisma and +1 to Strength';
 
         } else if (use === 'Protector Aasimar') {
-            baseCha += 2;
-            baseWis += 1;
-
             chaBuff = 2;
             wisBuff = 1;
             raceBuff.innerText = 'You receive +2 to Charisma and +1 to Wisdom';
 
         } else if (use === 'Scourge Aasimar') {
-            baseCha += 2;
-            baseCon += 2;
-
             chaBuff = 2;
             conBuff = 2;
             raceBuff.innerText = 'You receive +2 to Charisma and +2 to Constitution';
 
         } else if (use === 'Variant Aasimar') {
-            baseCha += 2;
-            baseWis += 1;
-
             chaBuff = 2;
             wisBuff = 1;
             raceBuff.innerText = 'You receive +2 to Charisma and +1 to Wisdom';
 
         } else if (use === 'Bugbear') {
-            baseStr += 2;
-            baseDex += 1;
-
             strBuff = 2;
             dexBuff = 1
             raceBuff.innerText = 'You receive +2 to Strength and +1 to Dexterity';
 
         } else if (use === 'Centaur') {
-            baseStr += 2;
-            baseWis += 1;
-
             strBuff = 2;
             wisBuff = 1;
             raceBuff.innerText = 'You receive +2 to Strength and +1 to Wisdom';
 
         } else if (use === 'Dragonborn') {
-            baseStr += 2;
-            baseCha += 1;
-
             strBuff = 2;
             chaBuff = 1;
             raceBuff.innerText = 'You receive +2 to Strength and +1 to Charisma';
 
         } else if (use === 'Hill Dwarf') {
-            baseCon += 2;
-            baseWis += 1;
-
             conBuff = 2;
             wisBuff = 1;
             raceBuff.innerText = 'You receive +2 to Constitution and +1 to Wisdom';
 
         } else if (use === 'Mountain Dwarf') {
-            baseCon += 2;
-            baseStr += 2;
-
             conBuff = 2;
             strBuff = 2;
             raceBuff.innerText = 'You receive +2 to Constitution and +2 to Strength';
 
         } else if (use === 'High Elf') {
-            baseDex += 2;
-            baseInt += 1;
-
             dexBuff = 2;
             intBuff = 1;
             raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Intelligence';
 
         } else if (use === 'Wood Elf') {
-            baseDex += 2;
-            baseWis += 1;
-
             dexBuff = 2;
             wisBuff = 1;
             raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Wisdom';
 
         } else if (use === 'Half-Elf') {
-            baseCha += 2;
             document.getElementById('playerChoice').style.display = 'inline-block';
 
             chaBuff = 2;
             raceBuff.innerText = 'You receive +2 to Charisma and +1 to a stat of your choosing';
 
         } else if (use === 'Half-Orc') {
-            baseStr += 2;
-            baseCon += 1;
-
             strBuff = 2;
             conBuff = 1;
             raceBuff.innerText = 'You receive +2 to Strength and +1 to Constitution';
 
         } else if (use === 'LightFoot Halfling') {
-            baseDex += 2;
-            baseCha += 1;
-
             dexBuff = 2;
             chaBuff = 1;
             raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Charisma';
 
         } else if (use === 'Stout Halfling') {
-            baseDex += 2;
-            baseCon += 1;
-
             dexBuff = 2;
             conBuff = 1;
             raceBuff.innerText = 'You receive +2 to Dexterity and +1 to Constitution';
 
         } else if (use === 'Human') {
-            baseCha += 1;
-            baseWis += 1;
-            baseDex += 1;
-            baseStr += 1;
-            baseCon += 1;
-            baseInt += 1;
-
             strBuff = 1;
             dexBuff = 1;
             conBuff = 1;
@@ -221,17 +168,11 @@
             raceBuff.innerText = 'You can choose two different stats to increase by +1';
 
         } else if (use === 'Rock Gnome') {
-            baseInt += 2;
-            baseCon += 1;
-
             intBuff = 2;
             conBuff = 1;
             raceBuff.innerText = 'You receive +2 to Intelligence and +1 to Constitution';
 
         } else if (use === 'Tiefling') {
-            baseInt += 1;
-            baseCha += 2;
-
             intBuff = 1;
             chaBuff = 2;
             raceBuff.innerText = 'You receive +2 to Charisma and +1 to Intelligence';
@@ -299,32 +240,32 @@
         document.getElementById('wisBuff').innerText = `+${wisBuff}`;
         document.getElementById('chaBuff').innerText = `+${chaBuff}`;
 
-        if(strBuff === '') {
+        if(strBuff === 0) {
             document.getElementById('strBuff').style.display = 'none';
         } else {
             document.getElementById('strBuff').style.display = 'flex';
         }
-        if(dexBuff === '') {
+        if(dexBuff === 0) {
             document.getElementById('dexBuff').style.display = 'none';
         } else {
             document.getElementById('dexBuff').style.display = 'flex';
         }
-        if(conBuff === '') {
+        if(conBuff === 0) {
             document.getElementById('conBuff').style.display = 'none';
         } else {
             document.getElementById('conBuff').style.display = 'flex';
         }
-        if(intBuff === '') {
+        if(intBuff === 0) {
             document.getElementById('intBuff').style.display = 'none';
         } else {
             document.getElementById('intBuff').style.display = 'flex';
         }
-        if(wisBuff === '') {
+        if(wisBuff === 0) {
             document.getElementById('wisBuff').style.display = 'none';
         } else {
             document.getElementById('wisBuff').style.display = 'flex';
         }
-        if(chaBuff === '') {
+        if(chaBuff === 0) {
             document.getElementById('chaBuff').style.display = 'none';
         } else {
             document.getElementById('chaBuff').style.display = 'flex';
@@ -339,19 +280,19 @@
         document.getElementById('wisAdjust').innerHTML = wisAdjust.toString();
         document.getElementById('chaAdjust').innerHTML = chaAdjust.toString();
 
-        document.getElementById('strTotal').innerHTML = 'Strength: ' + (strAdjust + baseStr).toString();
-        document.getElementById('dexTotal').innerHTML = 'Dexterity: ' + (dexAdjust + baseDex).toString();
-        document.getElementById('conTotal').innerHTML = 'Constitution: ' + (conAdjust + baseCon).toString();
-        document.getElementById('intTotal').innerHTML = 'Intelligence: ' + (intAdjust + baseInt).toString();
-        document.getElementById('wisTotal').innerHTML = 'Wisdom: ' + (wisAdjust + baseWis).toString();
-        document.getElementById('chaTotal').innerHTML = 'Charisma: ' + (chaAdjust + baseCha).toString();
+        document.getElementById('strTotal').innerHTML = 'Strength: ' + (strAdjust + baseStr + strBuff).toString();
+        document.getElementById('dexTotal').innerHTML = 'Dexterity: ' + (dexAdjust + baseDex + dexBuff).toString();
+        document.getElementById('conTotal').innerHTML = 'Constitution: ' + (conAdjust + baseCon + conBuff).toString();
+        document.getElementById('intTotal').innerHTML = 'Intelligence: ' + (intAdjust + baseInt + intBuff).toString();
+        document.getElementById('wisTotal').innerHTML = 'Wisdom: ' + (wisAdjust + baseWis + wisBuff).toString();
+        document.getElementById('chaTotal').innerHTML = 'Charisma: ' + (chaAdjust + baseCha + chaBuff).toString();
 
-       document.getElementById('strTotal_m').innerHTML = 'Strength: ' + (strAdjust + baseStr).toString();
-       document.getElementById('dexTotal_m').innerHTML = 'Dexterity: ' + (dexAdjust + baseDex).toString();
-       document.getElementById('conTotal_m').innerHTML = 'Constitution: ' + (conAdjust + baseCon).toString();
-       document.getElementById('intTotal_m').innerHTML = 'Intelligence: ' + (intAdjust + baseInt).toString();
-       document.getElementById('wisTotal_m').innerHTML = 'Wisdom: ' + (wisAdjust + baseWis).toString();
-       document.getElementById('chaTotal_m').innerHTML = 'Charisma: ' + (chaAdjust + baseCha).toString();
+       document.getElementById('strTotal_m').innerHTML = 'Strength: ' + (strAdjust + baseStr + strBuff).toString();
+       document.getElementById('dexTotal_m').innerHTML = 'Dexterity: ' + (dexAdjust + baseDex + dexBuff).toString();
+       document.getElementById('conTotal_m').innerHTML = 'Constitution: ' + (conAdjust + baseCon + conBuff).toString();
+       document.getElementById('intTotal_m').innerHTML = 'Intelligence: ' + (intAdjust + baseInt + intBuff).toString();
+       document.getElementById('wisTotal_m').innerHTML = 'Wisdom: ' + (wisAdjust + baseWis + wisBuff).toString();
+       document.getElementById('chaTotal_m').innerHTML = 'Charisma: ' + (chaAdjust + baseCha + chaBuff).toString();
     }
 
     function pointBuyUp(pointValue) {
@@ -376,32 +317,50 @@
 
     function playerChoice(id, selector) {
 
-            let selection = document.getElementById(id).selectedIndex;
-            let choices = document.querySelectorAll(selector);
-            let choice = choices[selection].value;
+         let selection = document.getElementById(id).selectedIndex;
+         let choices = document.querySelectorAll(selector);
+         let choice = choices[selection].value;
+         let choice1 = document.getElementById('pick1').selectedIndex;
+         let choice2 = document.getElementById('pick2').selectedIndex;
 
-            if(document.getElementById('playerChoice2').style.display === 'none' || document.getElementById('playerChoice').style.display === 'none') {
-             setBases();
-            };
-            if(choice === 'str') {
-                baseStr += 1;
-                strBuff = 1;
-            } else if(choice === 'dex') {
-                baseDex += 1;
-                dexBuff = 1;
-            } else if(choice === 'con') {
-                baseCon += 1;
-                conBuff = 1;
-            } else if(choice === 'int') {
-                baseInt += 1;
-                intBuff = 1;
-            } else if(choice === 'wis') {
-                baseWis += 1;
-                wisBuff = 1;
-            } else if(choice === 'cha') {
-                baseCha += 1;
-                chaBuff = 1;
+       if(document.getElementById('playerChoice2').style.display === 'none' || document.getElementById('playerChoice').style.display === 'none') {
+          setBases();
+         }
+
+       if(document.getElementById('playerChoice2').style.display !== 'none' && document.getElementById('playerChoice').style.display !== 'none') {
+             if(choice1 !== 1 && choice2 !== 1) {
+                strBuff = 0;
             }
+             if(choice1 !== 2 && choice2 !== 2) {
+                dexBuff = 0;
+            }
+             if(choice1 !== 3 && choice2 !== 3) {
+                conBuff = 0;
+            }
+             if(choice1 !== 4 && choice2 !== 4) {
+                intBuff = 0;
+            }
+             if(choice1 !== 5 && choice2 !== 5) {
+                wisBuff = 0;
+            }
+             if(choice1 !== 6 && choice2 !== 6) {
+                chaBuff = 0;
+            }
+        }
+            console.log(choice1, choice2);
+            if(choice === 'str') {
+             strBuff = 1;
+         } else if(choice === 'dex') {
+             dexBuff = 1;
+         } else if(choice === 'con') {
+             conBuff = 1;
+         } else if(choice === 'int') {
+             intBuff = 1;
+         } else if(choice === 'wis') {
+             wisBuff = 1;
+         } else if(choice === 'cha') {
+             chaBuff = 1;
+         }
 
             updateBuffs();
 
@@ -473,6 +432,9 @@
          pointBuy.style.display = 'block';
          toggle.innerText = 'Switch to Dice Roller';
      }
+
+     document.getElementById('pick1').selectedIndex = 0;
+     document.getElementById('pick2').selectedIndex = 0;
  }
 
  function playDiceRoll() {
