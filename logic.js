@@ -454,7 +454,7 @@
           document.getElementById('rollInt').innerText = rollInt;
           document.getElementById('rollWis').innerText = rollWis;
           document.getElementById('rollCha').innerText = rollCha;
-      }, 500);
+      }, 1000);
 
  }
 
