@@ -10,17 +10,17 @@
             baseWis = 8,
         chaAdjust = 0,
             baseCha = 8,
-        rollStr,
+
             strBuff = 0,
-        rollDex,
+
             dexBuff = 0,
-        rollCon,
+
             conBuff = 0,
-        rollInt,
+
             intBuff = 0,
-        rollWis,
+
             wisBuff = 0,
-        rollCha,
+        
             chaBuff = 0,
            pointBuy = 32;
 
