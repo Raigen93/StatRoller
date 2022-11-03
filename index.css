@@ -147,6 +147,10 @@ button {
         padding: 5px;
     }
 
+    .adjust {
+        width: 100%;
+    }
+
     #pointBuy {
         height: 100%;
     }
