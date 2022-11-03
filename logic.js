@@ -397,30 +397,34 @@
  }
 
  function setRolls() {
-      rollStr = rollStat();
-      rollDex = rollStat();
-      rollCon = rollStat();
-      rollInt = rollStat();
-      rollWis = rollStat();
-      rollCha = rollStat();
-
       playDiceRoll();
+     setTimeout(function() {
+         document.getElementById('rollStr').innerText = rollStat();
+         document.getElementById('rollDex').innerText = rollStat();
+         document.getElementById('rollCon').innerText = rollStat();
+         document.getElementById('rollInt').innerText = rollStat();
+         document.getElementById('rollWis').innerText = rollStat();
+         document.getElementById('rollCha').innerText = rollStat();
+     }, 100);
 
-          document.getElementById('rollStr').innerText = '';
-          document.getElementById('rollDex').innerText = '';
-          document.getElementById('rollCon').innerText = '';
-          document.getElementById('rollInt').innerText = '';
-          document.getElementById('rollWis').innerText = '';
-          document.getElementById('rollCha').innerText = '';
+     setTimeout(function() {
+         document.getElementById('rollStr').innerText = rollStat();
+         document.getElementById('rollDex').innerText = rollStat();
+         document.getElementById('rollCon').innerText = rollStat();
+         document.getElementById('rollInt').innerText = rollStat();
+         document.getElementById('rollWis').innerText = rollStat();
+         document.getElementById('rollCha').innerText = rollStat();
+     }, 300);
 
-      setTimeout(function() {
-          document.getElementById('rollStr').innerText = rollStr;
-          document.getElementById('rollDex').innerText = rollDex;
-          document.getElementById('rollCon').innerText = rollCon;
-          document.getElementById('rollInt').innerText = rollInt;
-          document.getElementById('rollWis').innerText = rollWis;
-          document.getElementById('rollCha').innerText = rollCha;
-      }, 1000);
+     setTimeout(function() {
+         document.getElementById('rollStr').innerText = rollStat();
+         document.getElementById('rollDex').innerText = rollStat();
+         document.getElementById('rollCon').innerText = rollStat();
+         document.getElementById('rollInt').innerText = rollStat();
+         document.getElementById('rollWis').innerText = rollStat();
+         document.getElementById('rollCha').innerText = rollStat();
+     }, 500);
+
 
  }
 

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="909f73d7-db6d-4043-a501-213d749a0e6d" name="Changes" comment="update logic/ work on die roll method">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="909f73d7-db6d-4043-a501-213d749a0e6d" name="Changes" comment="update logic/ work on die roll method" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,6 +98,7 @@
       <workItem from="1667335985010" duration="1247000" />
       <workItem from="1667337797617" duration="320000" />
       <workItem from="1667420920435" duration="6241000" />
+      <workItem from="1667431741476" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1666144395717</created>
