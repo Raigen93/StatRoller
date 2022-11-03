@@ -155,7 +155,7 @@ button {
     body {
         width: 98%;
         margin: 0;
-        height: 100%;
+        height: auto;
     }
 
     .frame {
@@ -173,7 +173,5 @@ button {
 
     #rollScores {
         height: 100vh;
-        padding-top: 25%;
-        padding-bottom: 25%;
     }
 }
