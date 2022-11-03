@@ -28,44 +28,19 @@
         </p>
     </div>
 
-    <div class="total_frame_mobile">
-        <span>Totals:</span>
-        <div class="m_totals">
-        <span class="total" id="strTotal_m"></span>
-        <span class="total" id="dexTotal_m"></span>
-        <span class="total" id="conTotal_m"></span>
-        <span class="total" id="intTotal_m"></span>
-        <span class="total" id="wisTotal_m"></span>
-        <span class="total" id="chaTotal_m"></span>
-        </div>
-    </div>
-
     <div>
         <span id="pointsRemaining"></span>
     </div>
 
 <section class="main_frame">
-    <div class="frame mobile1">
-        <span class="label"> Stats </span>
-
-        <span class="stat">Strength</span>
-
-        <span class="stat">Dexterity</span>
-
-        <span class="stat">Constitution</span>
-
-        <span class="stat">Intelligence</span>
-
-        <span class="stat">Wisdom</span>
-
-        <span class="stat">Charisma</span>
-    </div>
 
     <div class="frame bases">
         <span class="label">Point Buy</span>
         <div class="adjust">
             <button class="decrease" onclick="strAdjust = statDecrease(strAdjust, baseStr)
                                 setAdjust()">-</button>
+            <span class="total" id="strTotal">
+            </span><span class="stat">Adjust:</span>
             <span id="strAdjust"></span>
             <button class="increase" onclick="strAdjust = statIncrease(strAdjust, baseStr)
                                 setAdjust()">+</button>
@@ -74,6 +49,8 @@
         <div class="adjust">
             <button class="decrease" onclick="dexAdjust = statDecrease(dexAdjust, baseDex)
                                         setAdjust()">-</button>
+            <span class="total" id="dexTotal"></span>
+            <span class="stat">Adjust:</span>
             <span id="dexAdjust" ></span>
             <button class="increase" onclick="dexAdjust = statIncrease(dexAdjust, baseDex)
                                         setAdjust()">+</button>
@@ -82,6 +59,8 @@
         <div class="adjust">
             <button class="decrease" onclick="conAdjust = statDecrease(conAdjust, baseCon)
                                         setAdjust()">-</button>
+            <span class="total" id="conTotal"></span>
+            <span class="stat">Adjust:</span>
             <span id="conAdjust"></span>
             <button class="increase" onclick="conAdjust = statIncrease(conAdjust, baseCon)
                                         setAdjust()">+</button>
@@ -90,6 +69,8 @@
         <div class="adjust">
             <button class="decrease" onclick="intAdjust = statDecrease(intAdjust, baseInt)
                                         setAdjust()">-</button>
+            <span class="total" id="intTotal"></span>
+            <span class="stat">Adjust:</span>
             <span id="intAdjust"></span>
             <button class="increase" onclick="intAdjust = statIncrease(intAdjust, baseInt)
                                         setAdjust()">+</button>
@@ -98,6 +79,8 @@
         <div class="adjust">
             <button class="decrease" onclick="wisAdjust = statDecrease(wisAdjust, baseWis)
                                         setAdjust()">-</button>
+            <span class="total" id="wisTotal"></span>
+            <span class="stat">Adjust:</span>
             <span id="wisAdjust"></span>
             <button class="increase" onclick="wisAdjust = statIncrease(wisAdjust, baseWis)
                                         setAdjust()">+</button>
@@ -106,6 +89,8 @@
         <div class="adjust">
             <button class="decrease" onclick="chaAdjust = statDecrease(chaAdjust, baseCha)
                                         setAdjust()">-</button>
+            <span class="total" id="chaTotal"></span>
+            <span class="stat">Adjust:</span>
             <span id="chaAdjust"></span>
             <button class="increase" onclick="chaAdjust = statIncrease(chaAdjust, baseCha)
                                         setAdjust()">+</button>
@@ -113,22 +98,6 @@
 
     </div>
 
-    <div class="total_frame_desktop">
-        <span>Totals:</span>
-
-            <span class="total" id="strTotal"></span>
-
-            <span class="total" id="dexTotal"></span>
-
-            <span class="total" id="conTotal"></span>
-
-            <span class="total" id="intTotal"></span>
-
-            <span class="total" id="wisTotal"></span>
-
-            <span class="total" id="chaTotal"></span>
-
-    </div>
 </section>
 </section>
 
