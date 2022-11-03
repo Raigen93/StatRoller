@@ -20,7 +20,7 @@
             intBuff = 0,
 
             wisBuff = 0,
-        
+
             chaBuff = 0,
            pointBuy = 32;
 
