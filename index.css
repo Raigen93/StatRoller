@@ -36,7 +36,6 @@ header {
 
 .main_frame {
     display: flex;
-    width: 96%;
     border: 2px white dashed;
     margin: 2.5%;
 }
@@ -56,7 +55,7 @@ header {
 }
 
 .adjust {
-    margin: 6px;
+    margin: 6px 0;
 }
 
 #pointsRemaining {
@@ -64,17 +63,17 @@ header {
 }
 
 .total {
-    color: ghostwhite;
+    color: lightseagreen;
     width: 300px;
+    font-size: 1.5rem;
 }
 
 span {
-    padding: 5px;
     margin: 5px;
 }
 
 .race {
-    margin: 10px;
+    margin: 3px 10px;
 }
 
 .playerChoice,
@@ -91,12 +90,12 @@ span {
 
 .decrease {
     background: darkred;
-    float: left;
+    margin: 6px 5%;
 }
 
 .increase {
     background: darkgreen;
-    float: right;
+    margin: 6px 5%;
 }
 
 /* Styling for roll method */
@@ -127,7 +126,9 @@ span {
 
 .adjust {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    margin: 10px;
 }
 
 button {
@@ -144,7 +145,6 @@ button {
     body {
         width: 100%;
         margin: 3% 0;
-        padding: 5px;
     }
 
     .adjust {
