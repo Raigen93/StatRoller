@@ -398,7 +398,7 @@
          document.getElementById('rollInt').innerText = rollStat();
          document.getElementById('rollWis').innerText = rollStat();
          document.getElementById('rollCha').innerText = rollStat();
-     }, 100);
+     }, 150);
 
      setTimeout(function() {
          document.getElementById('rollStr').innerText = rollStat();
@@ -416,7 +416,7 @@
          document.getElementById('rollInt').innerText = rollStat();
          document.getElementById('rollWis').innerText = rollStat();
          document.getElementById('rollCha').innerText = rollStat();
-     }, 500);
+     }, 450);
 
 
  }
