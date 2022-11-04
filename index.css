@@ -17,6 +17,7 @@ body {
     width: 65%;
     margin: 5.5% 15%;
     padding: 10px;
+    backdrop-filter: blur(3px);
 }
 
 header {
