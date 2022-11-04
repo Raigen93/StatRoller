@@ -48,6 +48,7 @@ header {
 
 .label {
     text-decoration: underline;
+    display: block;
 }
 
 .stat {
