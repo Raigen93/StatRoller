@@ -107,6 +107,7 @@ span {
 
 #rollScores {
     display: none;
+    margin: 10% 0;
 }
 
 .rollStat {
@@ -151,7 +152,4 @@ button {
         width: 100%;
     }
 
-    #pointBuy {
-        height: 100%;
-    }
 }
